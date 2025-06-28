@@ -1,0 +1,343 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #000000, #e3e3e3);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Spline Cursor Layer */
+.spline-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000; /* Keep on top of everything */
+}
+
+spline-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.412);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: 'Anurati', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 0;
+  display: block;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  font-size: 24px;
+  color: #fff;
+}
+
+.account {
+  font-size: 0.9rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.account a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.account a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.account a:hover::after {
+  transform: scaleX(1);
+}
+
+.divider {
+  color: #fff;
+}
+
+/* Hero and Sections */
+#home{
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  z-index: 1;
+  max-width: 90%;
+  text-align: left;
+  padding: 20px;
+}
+
+#home h1 {
+  font-family: 'Anurati', sans-serif;
+  font-size: 15vw;
+  letter-spacing: 20px;
+  line-height: 1.1;
+  margin: 0;
+  color: #ffffff;
+}
+
+#about p,
+#contact p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+#about h1,
+#contact h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4vw;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 80px;
+  display: none;
+  padding: 2rem;
+}
+
+section.active {
+  display: block;
+}
+
+#products {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* align content to the left */
+  position: absolute;
+  top: 40%;
+  left: 5%; /* move to the left side */
+  transform: translateY(-50%); /* only vertical centering */
+  height: auto;
+  max-width: 90%;
+  text-align: left;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Only apply display: flex when active */
+#products.active {
+  display: flex;
+}
+
+
+
+#products p {
+  text-align: left;
+  font-family: orbitron, sans-serif;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+#products nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 0;
+  display: block;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+#products nav{
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+#products a:hover {
+  font-size: 24px;
+  color: #fff;
+}
+
+#products h1{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4vw;
+  margin-top: 50px;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.robo {
+  position: fixed;
+  top: 65%;
+  left: 90%; /* Adjusted to move next to the left-aligned text */
+  transform: translateY(-50%);
+  width: 50vw; /* Responsive width */
+  height: 40vw; /* Remove full height if not needed */
+  z-index: 1000;
+  /* background: #000; */
+}
+.robo_2{
+  position: fixed;
+  top: 60%;
+  left: 55%; /* Adjusted to move next to the left-aligned text */
+  transform: translateY(-50%);
+  width: 60vw; /* Responsive width */
+  height: 40vw; /* Remove full height if not needed */
+  z-index: 1000;
+  /* background: #000; */
+}
+
+#about h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4vw;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  text-align: center;
+}
+
+#about p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+
+.logos a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 0;
+  display: block;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.logos {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.logos a:hover {
+  font-size: 44px;
+  color: #fff;
+}
+
+form {
+  position: fixed;
+  top: 55%;
+  left: 20%;
+  width: 70vw;
+  transform: translateY(-50%);
+  max-width: 520px;
+  margin: 0;
+  padding: 30px 25px;
+  background: #00000052;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 1100;
+}
+
+.feedback-input {
+  color:white;
+  font-family: 'Orbitron', sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #ffffff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #00bfff; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+  resize: none; /* Prevent textarea from being resized */
+}
+
+#contact button {
+  background-color: transparent;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  padding: 12px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact button:hover {
+  border: 2px solid #00bfff;
+  transform: scale(1.05);
+}

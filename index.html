@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Phantom</title>
+    <meta name="description" content="Phantom - Innovative AI Tech Startup">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="brand">PHANTOM</div>
+
+      <ul class="nav-links">
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('products')">Products</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+
+      <div class="account">
+        <a href="#">Login</a>
+        <span class="divider">|</span>
+        <a href="#">Sign Up</a>
+      </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="main active">
+      <h1>PHANTOM</h1>
+      <!-- ✅ Spline cursor overlay -->
+      <div class="spline-cursor-wrapper">
+        <spline-viewer url="https://prod.spline.design/2R0imOiu8aSP17HZ/scene.splinecode"></spline-viewer>
+      </div>
+    </section>
+
+    <section id="products">
+      
+      <h1>Our Products</h1>
+      <p>Explore our range of innovative products designed to enhance your life <br>with cutting-edge technology.</p>
+      <nav class="product-links">
+        <a href="">Apps</a>
+        <a href="">IOT Devices</a>
+        <a href="">Electronics</a>
+        <a href="">Innovation Kits</a>
+        <a href="">Games</a>
+      </nav>
+      <div class="robo">
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/BXL88mdO4MWHplBe/scene.splinecode"></spline-viewer> -->
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.15/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/C5AcbYBXZnOjaU7P/scene.splinecode"></spline-viewer>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1>About Us</h1>
+      <p>At Phantom, we’re not just building technology — we’re shaping the future. Inspired by the spirit of innovation, Phantom is a next-generation tech startup focused on creating groundbreaking solutions in AI, web development, robotics, smart devices, and more. Our mission is to empower individuals and businesses with intelligent, beautifully designed, and deeply integrated technologies that make life smarter and more connected. Just like the name suggests, Phantom works silently but powerfully behind the scenes — driving change, sparking ideas, and pushing the limits of what’s possible. We don’t follow trends — we create them.</p>
+      <div class="logos">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact_form">
+        <form>      
+          <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+          <input name="email" type="text" class="feedback-input" placeholder="Email" />
+          <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+          <button>Send</button>
+        </form>
+      </div>
+      <div class="robo_2">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/BXL88mdO4MWHplBe/scene.splinecode"></spline-viewer>
+        
+      </div>
+    </section>
+
+    <!-- Spline Viewer Script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js"></script>
+
+    <!-- Script to remove Spline watermark -->
+    <script>
+      const interval = setInterval(() => {
+        const splineViewers = document.querySelectorAll('spline-viewer');
+        splineViewers.forEach(viewer => {
+          const shadow = viewer.shadowRoot;
+          if (shadow) {
+            const logo = shadow.querySelector('#logo');
+            if (logo) {
+              logo.remove();
+              clearInterval(interval);
+              console.log('Spline logo removed ✅');
+            }
+          }
+        });
+      }, 500);
+    </script>
+
+    <!-- Your script -->
+    <script src="script.js" async defer></script>
+  </body>
+</html>
