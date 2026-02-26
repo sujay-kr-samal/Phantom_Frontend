@@ -11,16 +11,16 @@ A next-generation tech startup frontend built with cutting-edge design — featu
 ## 📸 Screenshots
 
 ### 🏠 Home
-![Phantom Home Page](assets/home.png)
+![Phantom Home Page](assetes/home.png)
 
 ### 📦 Products
-![Phantom Products Page](assets/products.png)
+![Phantom Products Page](assetes/products.png)
 
 ### 🤖 About Us
-![Phantom About Page](assets/about.png)
+![Phantom About Page](assetes/about.png)
 
 ### 📬 Contact
-![Phantom Contact Page](assets/contact.png)
+![Phantom Contact Page](assetes/contact.png)
 
 ---
 
@@ -66,7 +66,7 @@ open index.html
 ```
 Phantom_Frontend/
 ├── index.html
-├── assets/
+├── assetes/
 │   ├── home.png
 │   ├── products.png
 │   ├── about.png
